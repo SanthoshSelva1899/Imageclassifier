@@ -1,0 +1,67 @@
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 50px;
+    padding: 30px;
+    width: 50%;
+}
+
+.photo {
+    max-width: 31.333%;
+    padding: 0 10px;
+    height: 240px;
+}
+
+.photo img {
+     width: 250px;
+     height: 250px;
+     border-radius: 50%;
+</style>
+<body>
+
+<marquee direction="right" 
+    behavior="alternate" 
+    style="border:BLACK 2px SOLID">
+    Model Prediction
+</marquee>
+
+<div class="images">
+    <div class="photo">
+        <img src="data:image/jpeg;base64,{{user_image}}" alt="photo" align="center"/>
+    </div>
+</div>
+
+<table style="width:100%">
+  <tr>
+    <th>Player</th>
+    <th>Probability</th>
+  </tr>
+  <tr>
+    <td>Virat</td>
+    <td>{{virat}}</td>
+  </tr>
+  <tr>
+    <td>Messi</td>
+    <td>{{messi}}</td>
+  </tr>
+  <tr>
+    <td>Roger</td>
+    <td>{{roger}}</td>
+  </tr>
+  <tr>
+    <td>Maria</td>
+    <td>{{maria}}</td>
+  </tr>
+  <tr>
+    <td>Serena</td>
+    <td>{{serena}}</td>
+  </tr>
+</table>
+
+</body>
+</html>

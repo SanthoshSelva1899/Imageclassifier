@@ -1,0 +1,76 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Person Classifier</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+         .images {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 50px;
+            padding: 30px;
+        }
+  
+        .photo {
+            max-width: 31.333%;
+            padding: 0 10px;
+            height: 240px;
+        }
+  
+        .photo img {
+             width: 250px;
+             height: 250px;
+             border-radius: 50%;
+        }
+        h1{
+         color: cyan;
+         text-align: center;
+      }
+      body {
+      background-color:orange;
+      }
+    </style>
+    
+</head>
+<body>
+    <<marquee direction="right" 
+        behavior="alternate" 
+        style="border:BLACK 2px SOLID">
+        SPORTS IMAGE CLASSIFER
+    </marquee>
+    <div class="images">
+        <div class="photo">
+            <img src="https://media.cnn.com/api/v1/images/stellar/prod/221218143144-28-world-cup-final-1218.jpg?c=16x9&q=h_270,w_480,c_fill" alt="photo" />
+        </div>
+  
+        <div class="photo">
+            <img src="https://cdn.britannica.com/47/196747-050-40B7BF2B/Maria-Sharapova-women-singles-event-US-Open-2006.jpg" alt="photo" />
+        </div>
+          
+        <div class="photo">
+            <img src="https://images.hindustantimes.com/img/2022/09/06/550x309/CRICKET-ASIANCUP-UAE-17_1662453913754_1662453913754_1662453933049_1662453933049.JPG" alt="photo" />
+        </div>
+        <div class="photo">
+            <img src="https://sportshub.cbsistatic.com/i/r/2022/09/15/406ba7f5-4022-474c-8e8d-cf180d2c1a16/thumbnail/1200x675/4f6c21a290afee7000572827cb85486d/roger-federer-getty.png" alt="photo" />
+        </div>
+        <div class="photo">
+            <img src="https://cdn.britannica.com/36/234836-050-6127751C/Serena-Williams-holds-daughter-Alexis-Olympia-Womens-ASB-Classic-Auckland-New-Zealand-January-12-2020.jpg" alt="photo" />
+        </div>
+    </div>
+    <form action="/predict" method="post" enctype="multipart/form-data" style="margin-top: 50px; width: 60%; text-align: center; margin: auto;" onsubmit="showloading()">
+        <span class="text-left btn btn-default btn-file">
+            Upload Image <input type="file" name="image" accept=".png, .jpg, .jpeg">
+        </span>   
+     
+        <span class="text-right">
+          <input type="submit" value="Predict" class="btn btn-primary">
+        </span>
+      </form>
+</body>
+</html>
+
